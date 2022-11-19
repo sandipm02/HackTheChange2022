@@ -2,6 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
+.spacing-top {
+  margin-top: 150px;
+  margin-bottom: 50px;
+}
+
+.navbar-color {
+  background-color: #343e44;
+}
+
+.logo-color {
+  color: #d8e7c0;
+}
+
+.bg-blue {
+  background-color: #343e44;
+}
+
+.bg-blue-text-green {
+  color: #d8e7c0;
+}
+
+.bg-green-text-blue {
+  color: #343e44;
+}
+
+.bg-green {
+  background-color: #d8e7c0;
+}
+
 .hero-image-person {
   width: 150vw !important;
 }
@@ -92,6 +121,54 @@
   }
   
 .login-button-hero:hover:after {
+    margin-left: 10px;
+    color: #343e44;
+    opacity: 1;
+    right: 10px;
+  }
+
+
+
+  .login-button-navbar {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100px;
+    margin-left: 10px;
+    background-color: #d8e7c0;
+    color: #343e44;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  
+.login-button-navbar{
+    margin-left: 10px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+.login-button-navbar:after {
+    margin-left: 10px;
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 5px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+.login-button-navbar:hover{
+    margin-left: 10px;
+    color: #343e44;
+    padding-right: 10px;
+    padding-left:8px;
+  }
+  
+.login-button-navbar:hover:after {
     margin-left: 10px;
     color: #343e44;
     opacity: 1;
