@@ -1,7 +1,7 @@
 import LoginPage from "./components/LoginPage";
 import HomePage from "./components/HomePage";
 
-import { createApplicant } from "./api/applicant";
+import { createApplicant, getApplicant, getAllApplicants } from "./api/applicant";
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -24,6 +24,16 @@ const analytics = getAnalytics(connection);
 const database = getDatabase(connection);
 
 function App() {
+
+  /*
+
+  let result = getApplicant(3);
+
+  result.then((snapshot) => {
+    console.log(snapshot.val());
+  });
+
+  */
 
   return (
     <div className="App">
