@@ -3,9 +3,7 @@
 @tailwind utilities;
 
 .hero-image-person {
-  height: auto;
-  width: 50vw;
-  padding-bottom: 0;
+  width: 150vw !important;
 }
 
 .green-line {
