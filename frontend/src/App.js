@@ -1,11 +1,11 @@
 import LoginPage from "./components/LoginPage";
-import { initializeDB } from "../../backend/api/firebaseConfig";
+import { initializeDB } from "./api/firebaseConfig";
 import HomePage from "./components/HomePage";
 
 function App() {
 
   // Initializing Firebase DB connection
-  initializeDB();
+  let DBapp = initializeDB();
 
   return (
     <div className="App">
