@@ -1,15 +1,15 @@
-function createHirer(data) {
+export function createHirer(data) {
     return;
 }
 
-function updateHirer(id, data) {
+export function updateHirer(id, data) {
     return;
 }
 
-function getHirer(id) {
+export function getHirer(id) {
     return;
 }
 
-function deleteHirer(id) {
+export function deleteHirer(id) {
     return;
 }
