@@ -1,4 +1,4 @@
-import { applicant, hirer, posting } from '../api';
+import { applicant, hirer, posting } from "../api";
 
 function determineMatches(h, post) {
     // pull all applicants
@@ -9,7 +9,7 @@ function determineMatches(h, post) {
 }
 
 function newUser(data) {
-    
+
 }
 
 function updateUserInfo() {
