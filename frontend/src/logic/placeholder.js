@@ -10,7 +10,7 @@ function determineMatches(post) {
 }
 
 function newUser(data) {
-
+    applicant.newUser(data)
 }
 
 function updateUserInfo() {
