@@ -2,6 +2,7 @@ import LoginPage from "./components/LoginPage";
 import LandingPage from "./components/landingPage";
 import Socials from "./components/Socials";
 import Content from "./components/Content";
+import Features from "./components/Features";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <LandingPage/>
         <Socials/>
         <Content/>
+        <Features/>
     </div>
   );
 }

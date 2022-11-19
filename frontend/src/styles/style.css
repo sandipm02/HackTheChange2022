@@ -2,8 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+.green-line {
+  height: 20px;
+  border-top: 5px solid #d8e7c0;
+  color: #d8e7c0;
+}
+
 .socials-bg {
   background-color: #fafafa;
+}
+
+.bg-green-custom {
+  background-color: #343e44;
+}
+
+.bg-green-text-green {
+  color: #d8e7c0;
+}
+
+.bg-green-text-white {
+  color: #ffffff;
 }
 
 .socials-text {
