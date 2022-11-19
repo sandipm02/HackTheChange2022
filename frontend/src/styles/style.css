@@ -2,3 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
+.hero-header {
+    font-weight: bolder;
+}
+
+@media (max-width: 1024px) {
+    .hero-image {
+        max-width: 60vh !important;
+        width: auto;
+    }
+}
+
+.hero-image {
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.login-button-hero {
+    width: 100px;
+    margin-left: 10px;
+    background-color: #343e44;
+    color: #d8e7c0;
+    border-radius: 4px;
+    border: none;
+    text-align: center;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  
+.login-button-hero{
+    margin-left: 10px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+.login-button-hero:after {
+    margin-left: 10px;
+    content: '»';
+    position: absolute;
+    opacity: 0;  
+    top: 13px;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+.login-button-hero:hover{
+    margin-left: 10px;
+    color: #343e44;
+    padding-right: 10px;
+    padding-left:8px;
+  }
+  
+.login-button-hero:hover:after {
+    margin-left: 10px;
+    color: #343e44;
+    opacity: 1;
+    right: 10px;
+  }
