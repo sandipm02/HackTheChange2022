@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+.socials-bg {
+  background-color: #f1f1f1;
+}
+
+.socials-text {
+  color: #343e44;
+}
+
+.socials-text2 {
+  color: #343e44;
+  font-weight: 500;
+}
+
 .hero-header {
     font-weight: bolder;
 }
