@@ -1,16 +1,25 @@
 import LoginPage from "./components/LoginPage";
-import LandingPage from "./components/landingPage";
 import Socials from "./components/Socials";
 import Content from "./components/Content";
+import LandingPage from "./components/LandingPage";
 
-function App() {
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link
+} from "react-router-dom";
+import React from 'react';
+
+export default function App() {
   return (
-    <div className="App">
-        <LandingPage/>
-        <Socials/>
-        <Content/>
-    </div>
+    <Routes>
+            <Route exact path="/"> <LandingPage/> </Route>
+            <Route path="/login"> <LoginPage/> </Route>
+
+            <Route path="/social"> <Socials/> </Route>
+            <Route path="/content"> <Content/> </Route>
+
+    </Routes>
   );
 }
-
-export default App;

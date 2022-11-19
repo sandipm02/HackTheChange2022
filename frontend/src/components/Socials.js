@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/style.css';
 
-function socials() {
+function Socials() {
     return (
         <section class="socials-bg bg-white dark:bg-gray-900">
         <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
@@ -24,4 +24,4 @@ function socials() {
     );
 }
 
-export default socials;
+export default Socials;

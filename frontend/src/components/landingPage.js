@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/style.css';
 
-function landingPage() {
+function LandingPage() {
     return (
         <div>
             <section class="bg-white dark:bg-gray-900">
@@ -25,4 +25,4 @@ function landingPage() {
     );
 }
 
-export default landingPage;
+export default LandingPage;
