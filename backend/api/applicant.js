@@ -1,15 +1,15 @@
-function createApplicant(data) {
+export function createApplicant(data) {
     return;
 }
 
-function updateApplicant(id, data) {
+export function updateApplicant(id, data) {
     return;
 }
 
-function getApplicant(id) {
+export function getApplicant(id) {
     return;
 }
 
-function deleteApplicant(id) {
+export function deleteApplicant(id) {
     return;
 }

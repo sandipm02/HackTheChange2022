@@ -1,15 +1,15 @@
-function createPosting(data) {
+export function createPosting(data) {
     return;
 }
 
-function updatePosting(id, data) {
+export function updatePosting(id, data) {
     return;
 }
 
-function getPosting(id) {
+export function getPosting(id) {
     return;
 }
 
-function deletePosting(id) {
+export function deletePosting(id) {
     return;
 }
