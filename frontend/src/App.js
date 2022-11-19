@@ -1,11 +1,11 @@
-import LoginPage from "./components/LoginPage";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
     <div className="App">
 
       <h1 className="text-3xl font-bold underline">
-        <LoginPage/>
+        <HomePage />
       </h1>
     </div>
   );
