@@ -1,12 +1,13 @@
-import React from 'react';
-import '../styles/style.css';
+// import React from 'react';
+// import '../styles/style.css';
 
-function LoginPage () {
-    return (
-        <div>
-            <p>hi</p>
-        </div>
-    );
-};
+// import { useAuth0 } from "@auth0/auth0-react";
 
-export default LoginPage;
+// const LoginPage = () => {
+//   const { loginWithRedirect } = useAuth0();
+
+//   return <button class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-l dark:text-white"
+//   onClick={() => loginWithRedirect()}>Log In</button>;
+// };
+
+// export default LoginPage;
