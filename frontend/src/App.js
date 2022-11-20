@@ -41,8 +41,71 @@ function App() {
   //deleteEntity('applicant', 56);
   //updateEntity('applicant', 3, {something: 'else'});
 
-  determineMatches(1);
+  createEntity('applicant', 3, {
+    "confidential": {
+    "name": {
+        "first": "Alex",
+        "last": "Dalgleish-Morel"
+      },
+    "location": {
+        "country": "Canada",
+        "state": "Alberta",
+        "city": "Calgary"
+      },
+    "age": 23,
+    "educational_institution": [
+        "University of Calgary"
+      ]
+    },
+    "education": {
+    "degree": [
+        {
+        "title": "Bachelor of Science",
+        "major": "Computer Science"
+        }
+      ]
+    },
+    "experience": [
+      {
+        "job_title": "Software Developer",
+        "industry": "Technology",
+        "description": "Coded...",
+        "years": 4
+      },
+      {
+        "job_title": "Business Analyst",
+        "industry": "Oil and Gas",
+        "description": "Analyzed...",
+        "years": 3
+      }
+    ],
+    "project": [
+      {
+        "title": "AI Scheduler",
+        "description": "Scheduled..."
+      },
+      {
+        "title": "Air Hockey Game",
+        "description": "Air hockey..."
+      }
+    ],
+    "seeking_industry": [
+        "Technology"
+    ],
+    "skills": [
+        "Python",
+        "Java",
+        "AWS"
+    ],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
+    "minimum_salary": 140000,
+    "total_years_experience": 3
+  });
 
+  determineMatches(1);
   // Initializing Firebase DB connection
   // let DBapp = initializeDB();
 
