@@ -58,19 +58,32 @@ function MainPage() {
                                 <CardActionArea>
 
                                     <CardContent>
+                                        {/* <Box sx={{ display: '-ms-inline-flexbox' }}> */}
 
-                                        <Typography gutterBottom variant="h5" component="div">
+                                            <Box sx={{ marginLeft: "12%",  }}>
+
+                                            {text.ContentID=='1'&&<img display="inline-block" width="25" height="25" src='https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg'></img>}
+                                            {text.ContentID=='2'&&<img display="inline-block" width="45" height="45" src='https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg'></img>}
+                                            {text.ContentID=='3'&&<img display="inline-block" width="45" height="45" src='https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg'></img>}
+  
+                                            </Box>
+                                            <Box sx={{ marginLeft: "91%", }}>
+
+                                                <Badge color="secondary" badgeContent={1} max={999}>
+                                                    <MailIcon />
+                                                </Badge>
+                                            </Box>
+                                        {/* </Box> */}
+                                        <Box sx={{ typography: 'body1', display: "-ms-inline-flexbox", marginTop: "-52px" }}>
+                                            <Box sx={{ fontFamily: "calibri", paddingBottom: "8px" }}>
+                                                <Typography gutterBottom variant="h5" component="div" style={{ fontWeight: "bold", fontSize: "1.5rem" }}>{text.Company}</Typography>                                            
+                                            </Box>
+                                        </Box>
 
 
-                                            <img display="inline-block" width="25" height="25" src='https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg'></img>
-                                            {text.Company}
 
-                                        </Typography>
-                                        <Badge color="secondary" badgeContent={1} max={999}>
-                                            <MailIcon />
-                                        </Badge>
 
-                                        <Divider />
+                                        <Divider sx={{ marginTop: "15px"}}/>
 
                                         <Typography variant="body1" color="text.secondary">
                                             {text.JobTitle}
