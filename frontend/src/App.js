@@ -42,6 +42,7 @@ function App() {
   //updateEntity('applicant', 3, {something: 'else'});
 
   determineMatches(1);
+
   // Initializing Firebase DB connection
   // let DBapp = initializeDB();
 

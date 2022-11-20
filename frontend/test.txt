@@ -89,7 +89,14 @@ test_posting = {
   "required_languages": [
     "English"
   ],
-  "years_experience": 3
+  "years_experience": 3,
+  "skills": [
+    "Python",
+    "Java",
+    "AWS",
+    "Debugging",
+    "Communication"
+  ],
 }
 
 test_hirer = {

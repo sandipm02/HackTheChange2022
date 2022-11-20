@@ -41,11 +41,6 @@ function filterMatches(allApplicants, posting) {
 
         if (validLanguages && validSalary) {
             eligibleApplicants.push(applicant);
-            console.log('Good application match!');
-        }
-        else {
-            console.log('Bad application match!');
-            console.log(applicant);
         }
         
         // order by most matching keywords
@@ -57,9 +52,9 @@ function filterMatches(allApplicants, posting) {
 }
 
 function computeScores(eligibleApplicants, posting) {
-    for (var applicant in eligibleApplicants) {
-        var score = 2*computeSkillsScore(applicant, posting) + computeIndustryScore(applicant, posting) + computeExperienceScore(applicant, posting);
-        applicant["score"] = score;
+    for (var key in eligibleApplicants) {
+        var score = 2*computeSkillsScore(eligibleApplicants[key], posting) + computeIndustryScore(eligibleApplicants[key], posting) + computeExperienceScore(eligibleApplicants[key], posting);
+        eligibleApplicants[key]["score"] = score;
     }
 
     return eligibleApplicants;
@@ -95,5 +90,90 @@ function computeExperienceScore(applicant, posting) {
 }
 
 function sortApplicants(eligibleApplicants) {
-    return[]
+
+    console.log(eligibleApplicants);
+
+    const queue = new PriorityQueue();
+    const sortedApplicants = [];
+
+    for (var applicant in eligibleApplicants) {
+        var applicantElement = new QElement(applicant, applicant['score']);
+        queue.enqueue(applicantElement);
+    }
+
+    sortedApplicants.push(queue.dequeue().element);
+
+    console.log(sortedApplicants.reverse());
+
+    return sortedApplicants.reverse();
+}
+
+// User defined class
+// to store element and its priority
+class QElement {
+    element;
+    priority;
+    constructor(element, priority)
+    {
+      this.element = element;
+      this.priority = priority;
+    }
+}
+  
+// PriorityQueue class
+class PriorityQueue {
+    items;
+  
+    // An array is used to implement priority
+    constructor()
+    {
+      this.items = [];
+    }
+  
+    // functions to be implemented
+    // enqueue(item, priority)
+    // enqueue function to add element to the queue as per priority
+    enqueue(element, priority)
+    {
+        // creating object from queue element
+        var qElement = new QElement(element, priority);
+        var contain = false;
+
+        // iterating through the entire
+        // item array to add element at the
+        // correct location of the Queue
+        for (var i = 0; i < this.items.length; i++) {
+            if (this.items[i].priority > qElement.priority) {
+                // Once the correct location is found it is
+                // enqueued
+                this.items.splice(i, 0, qElement);
+                contain = true;
+                break;
+            }
+        }
+
+        // if the element have the highest priority
+        // it is added at the end of the queue
+        if (!contain) {
+            this.items.push(qElement);
+        }
+    }
+
+    // dequeue()
+    dequeue()
+    {
+        // return the dequeued element
+        // and remove it.
+        // if the queue is empty
+        // returns Underflow
+        if (this.isEmpty())
+            return "Underflow";
+        return this.items.shift();
+    }
+
+    // return true if the queue is empty.
+    isEmpty()
+    {
+        return this.items.length == 0;
+    }
 }
