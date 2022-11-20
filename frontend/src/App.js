@@ -1,7 +1,7 @@
 import LoginPage from "./components/LoginPage";
 import HomePage from "./components/HomePage";
 
-import { createApplicant, getApplicant, getAllApplicants } from "./api/applicant";
+import { createEntity, getEntity, getAllEntities, deleteEntity, updateEntity } from "./database";
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -25,15 +25,11 @@ const database = getDatabase(connection);
 
 function App() {
 
-  /*
+  //createEntity('applicant', 3, {first: 'alex', last: 'dalgleish-morel'});
+  //getEntity('applicant', 3).then((snapshot) => console.log(snapshot.val()));
+  //deleteEntity('applicant', 3);
+  //updateEntity('applicant', 3, {something: 'else'});
 
-  let result = getApplicant(3);
-
-  result.then((snapshot) => {
-    console.log(snapshot.val());
-  });
-
-  */
 
   return (
     <div className="App">
