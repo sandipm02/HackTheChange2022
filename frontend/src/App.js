@@ -41,7 +41,7 @@ function App() {
   //deleteEntity('applicant', 56);
   //updateEntity('applicant', 3, {something: 'else'});
 
-  createEntity('applicant', 3, {
+  createEntity('applicant', 4, {
     "confidential": {
     "name": {
         "first": "Alex",
@@ -52,7 +52,7 @@ function App() {
         "state": "Alberta",
         "city": "Calgary"
       },
-    "age": 23,
+    "age": 22,
     "educational_institution": [
         "University of Calgary"
       ]
@@ -93,16 +93,13 @@ function App() {
         "Technology"
     ],
     "skills": [
-        "Python",
-        "Java",
-        "AWS"
+        "Python"
     ],
     "languages": [
-      "English",
-      "Spanish"
+      "English"
     ],
-    "minimum_salary": 140000,
-    "total_years_experience": 3
+    "minimum_salary": 100000,
+    "total_years_experience": 0
   });
 
   determineMatches(1);
