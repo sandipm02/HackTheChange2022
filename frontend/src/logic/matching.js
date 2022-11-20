@@ -10,7 +10,7 @@ export function determineMatches(postingID) {
     database.getAllEntities('applicant').then((applicants_snapshot) => {
         // Pulling the specific posting from the DB based on ID
         database.getEntity('posting', postingID).then((posting_snapshot) => {
-            filterMatches(applicants_snapshot, posting_snapshot);
+            filterMatches(applicants_snapshot.val(), posting_snapshot.val());
         });
     });
 }
@@ -23,18 +23,40 @@ export function determineMatches(postingID) {
  */
 function filterMatches(allApplicants, posting) {
 
-    // filter out applicants without overlapping spoken languages
-    
-    // filter out applicants whose minimum salary exceeds the offered salary of the company
+    let eligibleApplicants = [];
 
-    // order by most matching keywords
+    //allApplicants = JSON.parse(JSON.stringify(allApplicants[1]));
+
+    // Iterating through each applicant
+    for (var key of Object.keys(allApplicants)) {
+        let applicant = allApplicants[key];
+        let applicant_languages = Object.values(applicant['languages']);
+        let posting_languages = Object.values(posting['required_languages']);
+        // filter out applicants without overlapping spoken languages
+        const filteredLanguages = posting_languages.filter(value => applicant_languages.includes(value));
+        const validLanguages = filteredLanguages.length === posting_languages.length;
+
+        // filter out applicants whose minimum salary exceeds the offered salary of the company
+        const validSalary = applicant['minimum_salary'] <= posting['salary'];
+
+        if (validLanguages && validSalary) {
+            // Add this application to consideration for this posting
+            console.log('Good application match!');
+        }
+        else {
+            console.log('Bad application match!');
+            console.log(applicant);
+        }
+        
+        // order by most matching keywords
+    }
 }
 
 function newUser(data) {
-    //applicant.newUser(data)
+
 }
 
 function updateUserInfo() {
-    
+
 }
 

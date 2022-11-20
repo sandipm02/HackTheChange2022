@@ -28,11 +28,10 @@ function App() {
 
   //createEntity('applicant', 3, {first: 'alex', last: 'dalgleish-morel'});
   //getEntity('applicant', 3).then((snapshot) => console.log(snapshot.val()));
-  //deleteEntity('applicant', 3);
+  //deleteEntity('applicant', 56);
   //updateEntity('applicant', 3, {something: 'else'});
 
-  determineMatches();
-
+  determineMatches(1);
 
   return (
     <div className="App">
