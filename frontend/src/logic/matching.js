@@ -52,34 +52,17 @@ function filterMatches(allApplicants, posting) {
         // for each applicant, assign a matching score, and then sort applicants by that score
             // create function that takes the list of valid applicants and their matching scores as input and returns the same list sorted according to these scores
 
-        var matchingScores = computeScores(eligibleApplicants, posting)
-        return sortApplicants(eligibleApplicants)
+        return sortApplicants(computeScores(eligibleApplicants, posting));
     }
 }
 
 function computeScores(eligibleApplicants, posting) {
     for (var applicant in eligibleApplicants) {
-        var applicantSkills = Object.values(applicant['skills']);
-        var postingSkills = Object.values(posting['skills']);
-        var intersection = postingSkills.filter(value => applicantSkills.includes(value));
-
-        var ratio = intersection.length / postingSkills.length;
+        var score = 2*computeSkillsScore(applicant, posting) + computeIndustryScore(applicant, posting) + computeExperienceScore(applicant, posting);
+        applicant["score"] = score;
     }
 
-    // "skills" matching rating from 0 to 10
-        // skillScore = ratio of matching to total num skills * 10
-    
-    // "industry" matching rating from 0 to 10
-        // industryScore = ratio of matching to total num industries * 10
-
-    // years_experience
-        // experienceScore = 5
-        // every year of experience above this number adds one to the score, up to 10
-        // every year of experience below this number removes one from the score, down to 0
-
-    // score for the current applicant in consideration is 2*skillScore + industryScore + experienceScore
-
-    return []
+    return eligibleApplicants;
 }
 
 function computeSkillsScore(applicant, posting) {
