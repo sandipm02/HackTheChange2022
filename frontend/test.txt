@@ -63,7 +63,8 @@ test_applicant = {
       "English",
       "Spanish"
     ],
-    "minimum_salary": 150000
+    "minimum_salary": 150000,
+    "total_years_experience": 7
   }
 
 test_posting = {

@@ -60,3 +60,15 @@ function updateUserInfo() {
 
 }
 
+function computeExperienceScore(applicant, posting) {
+    // Setting the total score for an applicant experience rating to be 5 to begin with
+    let totalScore = 5;
+    let difference = applicant['total_years_experience'] - posting['years_exprience'];
+
+    // Adding or subtracting from 5, down to 0 or up to 10, based on how the applicant compares to the posting
+    if (Math.abs(difference) <= 5) {
+        totalScore += difference;
+    }
+
+    return totalScore;
+}
