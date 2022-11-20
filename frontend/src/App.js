@@ -41,18 +41,18 @@ function App() {
   //deleteEntity('applicant', 56);
   //updateEntity('applicant', 3, {something: 'else'});
 
-  // createEntity('applicant', 4, {
+  // createEntity('applicant', 0, {
   //   "confidential": {
   //   "name": {
-  //       "first": "Alex",
-  //       "last": "Dalgleish-Morel"
+  //       "first": "LeBron",
+  //       "last": "James"
   //     },
   //   "location": {
   //       "country": "Canada",
   //       "state": "Alberta",
   //       "city": "Calgary"
   //     },
-  //   "age": 22,
+  //   "age": 45,
   //   "educational_institution": [
   //       "University of Calgary"
   //     ]
@@ -98,8 +98,8 @@ function App() {
   //   "languages": [
   //     "English"
   //   ],
-  //   "minimum_salary": 100000,
-  //   "total_years_experience": 0
+  //   "minimum_salary": 1000000,
+  //   "total_years_experience": 20
   // });
 
   determineMatches(1);
