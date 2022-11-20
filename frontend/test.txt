@@ -62,7 +62,7 @@ test_applicant = {
     ]
   }
 
-test_hirer = {
+test_posting = {
   id: 1,
   hirer: 1,
   benefits: [
@@ -84,3 +84,19 @@ test_hirer = {
   ],
   years_experience: 3
 }
+
+test_hirer = {
+    id: 1,
+    name: {
+      first: "Heath",
+      last: "Ledger"
+    },
+    company: {
+      name: "Google",
+      location: {
+        country: "United States",
+        state: "California",
+        city: "San Francisco"
+      }
+    },
+  }
