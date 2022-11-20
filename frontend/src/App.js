@@ -1,4 +1,14 @@
 import LoginPage from "./components/LoginPage";
+import Socials from "./components/Socials";
+import Content from "./components/Content";
+import LandingPage from "./components/LandingPage";
+import MainPage from "./components/MainPage";
+
+import { Routes, Route } from "react-router-dom";
+import React from "react";
+
+
+// import { initializeDB } from "./api/firebaseConfig";
 import HomePage from "./components/HomePage";
 
 import { createEntity, getEntity, getAllEntities, deleteEntity, updateEntity } from "./database";
@@ -32,14 +42,21 @@ function App() {
   //updateEntity('applicant', 3, {something: 'else'});
 
   determineMatches(1);
+  // Initializing Firebase DB connection
+  // let DBapp = initializeDB();
 
   return (
-    <div className="App">
-      <h1 className="text-3xl font-bold underline">
-        <HomePage />
-      </h1>
-    </div>
+    <Routes>
+      <Route exact path="/" element={<LandingPage />} />
+      <Route exact path="/socials" element={<Socials />} />
+      <Route exact path="/landingpage" element={<LandingPage />} />
+      <Route exact path="/content" element={<Content />} />
+      <Route exact path="/login" element={<LoginPage />} />
+      <Route exact path="/main" element={<MainPage />} />
+
+
+    </Routes>
   );
 }
+export default App
 
-export default App;
