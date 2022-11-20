@@ -3,7 +3,7 @@ import React from 'react';
 import '../styles/style.css';
 import LoginPage from "./LoginPage";
 import LogOut from './LogOut'
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
 import Content from './Content'
 
 function HomePage() {
@@ -26,12 +26,12 @@ function HomePage() {
   //   else
   //     return <OtherComponent/>
   // }
-  const { user, isAuthenticated, isLoading } = useAuth0();
-  const [authenticated] = React.useState(false);
+  // const { user, isAuthenticated, isLoading } = useAuth0();
+  // const [authenticated] = React.useState(false);
 
-  if (isLoading) {
-    return <div>Loading ...</div>;
-  }
+  // if (isLoading) {
+  //   return <div>Loading ...</div>;
+  // }
   return (
     <div>
       <section class="bg-gray-50 dark:bg-gray-900">
