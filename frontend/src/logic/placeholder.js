@@ -1,18 +1,24 @@
 import * as database from '../database';
-import { useState } from 'react';
 
-function determineMatches() {
-    const [allApplicants, setAllApplicants] = useState([]);
-
+export function pullApplicants() {
     // pull all applicants
     database.getAllEntities('applicant').then((snapshot) => {
-        setAllApplicants(snapshot.val());
-        console.log('got snapshot!');
+        console.log('here!');
+        console.log(snapshot.val());
+        determineMatches(snapshot.val());
     });
+}
+
+function determineMatches(allApplicants) {
+
+    if (!allApplicants) {
+        return;
+    }
 
     // filter out applicants without overlapping spoken languages
     if (allApplicants.length > 0) {
         console.log('processing!');
+        console.log(allApplicants);
     }
     // filter out applicants whose minimum salary exceeds the offered salary of the company
 

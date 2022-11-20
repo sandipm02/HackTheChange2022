@@ -2,7 +2,7 @@ import LoginPage from "./components/LoginPage";
 import HomePage from "./components/HomePage";
 
 import { createEntity, getEntity, getAllEntities, deleteEntity, updateEntity } from "./database";
-import * as extras from './logic/Placeholder';
+import { pullApplicants } from './logic/placeholder';
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
@@ -30,6 +30,8 @@ function App() {
   //getEntity('applicant', 3).then((snapshot) => console.log(snapshot.val()));
   //deleteEntity('applicant', 3);
   //updateEntity('applicant', 3, {something: 'else'});
+
+  pullApplicants();
 
 
   return (
