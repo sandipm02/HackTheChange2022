@@ -1,0 +1,63 @@
+test_applicant = {
+    id: "1",
+    confidential: {
+    name: {
+        first: "Gabriel",
+        last: "Cameron"
+      },
+    location: {
+        country: "Canada",
+        state: "Alberta",
+        city: "Calgary"
+      },
+    age: 23,
+    educational_institution: [
+        "University of Calgary"
+      ]
+    },
+    education: {
+    degree: [
+        {
+        title: "Bachelor of Science",
+        major: "Computer Science"
+        },
+        {
+        title: "Bachelor of Commerce",
+        major: "Finance"
+        }
+      ]
+    },
+    experience: [
+      {
+        job_title: "Software Developer",
+        industry: "Technology",
+        description: "Coded...",
+        years: 4
+      },
+      {
+        job_title: "Business Analyst",
+        industry: "Oil and Gas",
+        description: "Analyzed...",
+        years: 3
+      }
+    ],
+    project: [
+      {
+        title: "AI Scheduler",
+        description: "Scheduled..."
+      },
+      {
+        title: "Air Hockey Game",
+        description: "Air hockey..."
+      }
+    ],
+    seeking_industry: [
+        "Technology",
+        "Oil and Gas"
+    ],
+    skills: [
+        "Python",
+        "Java",
+        "AWS"
+    ]
+  }
