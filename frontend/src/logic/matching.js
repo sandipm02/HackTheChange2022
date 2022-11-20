@@ -25,11 +25,11 @@ function filterMatches(allApplicants, posting) {
 
     let eligibleApplicants = [];
 
-    //allApplicants = JSON.parse(JSON.stringify(allApplicants[1]));
-
     // Iterating through each applicant
     for (var key of Object.keys(allApplicants)) {
+
         let applicant = allApplicants[key];
+
         let applicantLanguages = Object.values(applicant['languages']);
         let postingLanguages = Object.values(posting['required_languages']);
         // filter out applicants without overlapping spoken languages
@@ -41,14 +41,10 @@ function filterMatches(allApplicants, posting) {
 
         if (validLanguages && validSalary) {
             eligibleApplicants.push(applicant);
-        }
-        
-        // order by most matching keywords
-        // for each applicant, assign a matching score, and then sort applicants by that score
-            // create function that takes the list of valid applicants and their matching scores as input and returns the same list sorted according to these scores
-
-        return sortApplicants(computeScores(eligibleApplicants, posting));
+        }        
     }
+
+    return sortApplicants(computeScores(eligibleApplicants, posting));
 }
 
 function computeScores(eligibleApplicants, posting) {
@@ -90,22 +86,19 @@ function computeExperienceScore(applicant, posting) {
 }
 
 function sortApplicants(eligibleApplicants) {
-
-    console.log(eligibleApplicants);
-
+    
     const queue = new PriorityQueue();
     const sortedApplicants = [];
 
-    for (var applicant in eligibleApplicants) {
-        var applicantElement = new QElement(applicant, applicant['score']);
-        queue.enqueue(applicantElement);
+    for (var key in eligibleApplicants) {
+        queue.enqueue(eligibleApplicants[key], eligibleApplicants[key]['score']);
     }
 
-    sortedApplicants.push(queue.dequeue().element);
+    for (var key in eligibleApplicants) {
+        sortedApplicants.push(queue.dequeue().element);
+    }
 
-    console.log(sortedApplicants.reverse());
-
-    return sortedApplicants.reverse();
+    return sortedApplicants;
 }
 
 // User defined class
@@ -174,6 +167,6 @@ class PriorityQueue {
     // return true if the queue is empty.
     isEmpty()
     {
-        return this.items.length == 0;
+        return this.items.length === 0;
     }
 }

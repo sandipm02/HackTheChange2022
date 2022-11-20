@@ -1,4 +1,4 @@
-import { getDatabase, ref, child, get, set, push, update, remove } from "firebase/database";
+import { getDatabase, ref, child, get, set, remove } from "firebase/database";
 
 export function createEntity(entity, id, data) {
     const db = getDatabase();
