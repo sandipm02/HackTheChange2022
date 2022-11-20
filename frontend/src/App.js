@@ -2,6 +2,7 @@ import LoginPage from "./components/LoginPage";
 import HomePage from "./components/HomePage";
 
 import { createEntity, getEntity, getAllEntities, deleteEntity, updateEntity } from "./database";
+import * as extras from './logic/Placeholder';
 
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
