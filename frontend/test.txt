@@ -61,3 +61,26 @@ test_applicant = {
         "AWS"
     ]
   }
+
+test_hirer = {
+  id: 1,
+  hirer: 1,
+  benefits: [
+    "Health",
+    "Dental",
+    "Free Breakfast"
+  ],
+  salary: 180000,
+  description: "Things...",
+  education: [
+    {
+      degree: "Computer Science",
+      level: "Bachelors"
+    }
+  ],
+  industry: [
+    "Technology",
+    "Finance"
+  ],
+  years_experience: 3
+}
