@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .spacing-top {
-  margin-top: 150px;
+  margin-top: 100px;
   margin-bottom: 50px;
 }
 
