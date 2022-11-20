@@ -5,7 +5,15 @@ import LandingPage from "./components/LandingPage";
 import { Routes, Route } from "react-router-dom";
 import React from "react";
 
-export default function App() {
+
+import { initializeDB } from "./api/firebaseConfig";
+import HomePage from "./components/HomePage";
+
+function App() {
+
+  // Initializing Firebase DB connection
+  let DBapp = initializeDB();
+
   return (
     <Routes>
       <Route exact path="/" element={<LandingPage />} />
